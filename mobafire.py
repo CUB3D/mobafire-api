@@ -34,6 +34,7 @@ class mobafireParser(HTMLParser):
 def get_guides(championName):
     guideURL = get_champ_guide_url(championName)
     parser = mobafireParser()
+    parser.guides = []
     parser.feed(get_page_html(guideURL))
     return [get_specific_guide_url(x) for x in parser.guides]
 
