@@ -40,5 +40,6 @@ def get_guides(championName):
 def get_top_guide(championName):
     return get_guides(championName)[0]
 
-championName = sys.argv[-1]
-print("Top guide:", get_top_guide(championName))
+if __name__ == "__main__":
+    championName = sys.argv[-1]
+    print("Top guide:", get_top_guide(championName))
